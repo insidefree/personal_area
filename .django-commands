@@ -1,0 +1,9 @@
+Alr + R #django terminal
+
+startapp "app name" # create app
+
+makemigrations "appname" #make migrations at folder ./appname/migrations
+
+migrate "appname" # apply migrations
+
+createsuperuser # create user for admin panel
