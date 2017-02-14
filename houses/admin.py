@@ -4,4 +4,4 @@ from .models import House
 
 @admin.register(House)
 class AdminHouse(admin.ModelAdmin):
-    pass
+    list_display = ["name", "price", "description"]

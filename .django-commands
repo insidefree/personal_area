@@ -6,4 +6,4 @@ makemigrations "appname" #make migrations at folder ./appname/migrations
 
 migrate "appname" # apply migrations
 
-createsuperuser # create user for admin panel
+createsuperuser # create user for admin panel (default pswd: admin123)

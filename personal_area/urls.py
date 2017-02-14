@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from houses.views import houses_list, house_detail
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-]
+    url(r'^$', houses_list, name='home'),
+    url(r'^(?P<house_id>\d+)/$', house_detail, name='house')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
